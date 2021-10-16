@@ -1,428 +1,475 @@
-
-
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-
-  <meta charset="UTF-8">
-  
-<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
-<meta name="apple-mobile-web-app-title" content="CodePen">
-
-<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
-
-<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
-
-
-  <title>Wiki Colors</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-  
-<style>
-.color-palette .palette {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  border-color: black;
-  border-radius: 4px;
-  position: relative;
-}
-.color-palette .palette.primary-green {
-  background: #45AD44;
-}
-.color-palette .palette.primary-green:hover {
-  background: #368836;
-}
-.color-palette .palette.link-blue {
-  background: #0074e8;
-}
-.color-palette .palette.link-blue:hover {
-  background: #005ab5;
-}
-.color-palette .palette.presentation-yellow {
-  background: #ffbba5;
-}
-.color-palette .palette.presentation-yellow:hover {
-  background: #ff9472;
-}
-.color-palette .palette.purple-mountain {
-  background: #a14ebf;
-}
-.color-palette .palette.purple-mountain:hover {
-  background: #853aa0;
-}
-.color-palette .palette.help-orange {
-  background: #E67E22;
-}
-.color-palette .palette.help-orange:hover {
-  background: #bf6516;
-}
-.color-palette .palette.warm-light {
-  background: #FCF4E8;
-}
-.color-palette .palette.warm-light:hover {
-  background: #f6debb;
-}
-.color-palette .palette.storm-cloud {
-  background: #666666;
-}
-.color-palette .palette.storm-cloud:hover {
-  background: #4d4d4d;
-}
-.color-palette .palette.steel {
-  background: #333333;
-}
-.color-palette .palette.steel:hover {
-  background: #1a1a1a;
-}
-.color-palette .palette.paper {
-  background: #FFFFFF;
-}
-.color-palette .palette.paper:hover {
-  background: #e6e6e6;
-}
-.color-palette .palette.void {
-  background: #0E0E0E;
-}
-.color-palette .palette.void:hover {
-  background: #000000;
-}
-.color-palette .palette.dark-matter {
-  background: #232323;
-}
-.color-palette .palette.dark-matter:hover {
-  background: #0a0a0a;
-}
-.color-palette .palette.stainless {
-  background: #B2B2B2;
-}
-.color-palette .palette.stainless:hover {
-  background: #999999;
-}
-.color-palette .palette.ethereal {
-  background: #D8D8D8;
-}
-.color-palette .palette.ethereal:hover {
-  background: #bfbfbf;
-}
-.color-palette .palette.silver-diva {
-  background: #EBEBEB;
-}
-.color-palette .palette.silver-diva:hover {
-  background: #d2d2d2;
-}
-.color-palette .palette.morning-dew {
-  background: #c0f3a7;
-}
-.color-palette .palette.morning-dew:hover {
-  background: #a0ed7a;
-}
-.color-palette .palette.foggy {
-  background: #cee1f7;
-}
-.color-palette .palette.foggy:hover {
-  background: #a2c6f0;
-}
-.color-palette .palette.plastic-cheese {
-  background: #f9cb76;
-}
-.color-palette .palette.plastic-cheese:hover {
-  background: #f7b845;
-}
-.color-palette .palette.lavendery {
-  background: #cc99cc;
-}
-.color-palette .palette.lavendery:hover {
-  background: #bb77bb;
-}
-.color-palette .palette.just-peachy {
-  background: #ffcc99;
-}
-.color-palette .palette.just-peachy:hover {
-  background: #ffb366;
-}
-.color-palette .palette.ectoplasm {
-  background: #85dd85;
-}
-.color-palette .palette.ectoplasm:hover {
-  background: #5dd25d;
-}
-.color-palette .palette.robins-egg {
-  background: #99ccff;
-}
-.color-palette .palette.robins-egg:hover {
-  background: #66b2ff;
-}
-.color-palette .palette.cool-ranch {
-  background: #f8bd4f;
-}
-.color-palette .palette.cool-ranch:hover {
-  background: #f6ab1e;
-}
-.color-palette .palette.witch-cape {
-  background: #9966cc;
-}
-.color-palette .palette.witch-cape:hover {
-  background: #7f40bf;
-}
-.color-palette .palette.salmon {
-  background: #E67E22;
-}
-.color-palette .palette.salmon:hover {
-  background: #bf6516;
-}
-.color-palette .palette.mr-toad {
-  background: #478f47;
-}
-.color-palette .palette.mr-toad:hover {
-  background: #366d36;
-}
-.color-palette .palette.poseidon {
-  background: #0066cc;
-}
-.color-palette .palette.poseidon:hover {
-  background: #004c99;
-}
-.color-palette .palette.cheetah {
-  background: #eb9c0a;
-}
-.color-palette .palette.cheetah:hover {
-  background: #ba7c08;
-}
-.color-palette .palette.purple-people-eater {
-  background: #663399;
-}
-.color-palette .palette.purple-people-eater:hover {
-  background: #4c2673;
-}
-.color-palette .palette.five-alarm-chili {
-  background: #ff3300;
-}
-.color-palette .palette.five-alarm-chili:hover {
-  background: #cc2900;
-}
-.color-palette .palette.forest {
-  background: #104810;
-}
-.color-palette .palette.forest:hover {
-  background: #071e07;
-}
-.color-palette .palette.post-box {
-  background: #003366;
-}
-.color-palette .palette.post-box:hover {
-  background: #001933;
-}
-.color-palette .palette.squashy {
-  background: #d78f09;
-}
-.color-palette .palette.squashy:hover {
-  background: #a66e07;
-}
-.color-palette .palette.california-raisins {
-  background: #663366;
-}
-.color-palette .palette.california-raisins:hover {
-  background: #442244;
-}
-.color-palette .palette.paprika {
-  background: #cc3300;
-}
-.color-palette .palette.paprika:hover {
-  background: #992600;
-}
-.color-palette .palette.dark-blue {
-  background: #004d99;
-}
-.color-palette .palette.dark-blue:hover {
-  background: #003366;
-}
-.color-palette .palette.background-gray {
-  background: #FBFCFC;
-}
-.color-palette .palette.background-gray:hover {
-  background: #dee6e6;
-}
-.copied {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  position: absolute;
-  background: #fff;
-  border-radius: 100px;
-  padding: 10px;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  margin-left: -40px;
-  margin-top: -20px;
-  color: #333;
-  width: 80px;
-  transform: scale(0);
-  opacity: 1;
-}
-.copiedEffect {
-  animation: rippleDrop 0.5s linear;
-}
-.ripple {
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: #ffffff;
-  transform: scale(0.8);
-  position: absolute;
-  opacity: 0;
-}
-.rippleEffect {
-  animation: rippleDrop 0.5s linear;
-}
-.copiedEffect {
-  animation: copiedDrop 1s ease;
-}
-@keyframes rippleDrop {
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-@keyframes copiedDrop {
-  50% {
-    transform: scale(0.8);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.2);
-    opacity: 0;
-  }
-}
-/****** Footer ******/
-.footer {
-  background-color: white;
-}
-/*** Sticky Footer ***/
-html {
-  position: relative;
-  min-height: 100%;
-}
-body {
-  margin-bottom: 60px;
-  background-color: #d6d6d6;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-}
-</style>
-
-  
-  
-  
-  
-
+	<meta charset="UTF-8">
+	<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+	<meta name="apple-mobile-web-app-title" content="CodePen">
+	<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+	<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+	<title>Wiki Colors</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+	<style>
+	.color-palette .palette {
+		width: 100px;
+		height: 100px;
+		display: inline-block;
+		border-color: black;
+		border-radius: 4px;
+		position: relative;
+	}
+	
+	.color-palette .palette.primary-green {
+		background: #45AD44;
+	}
+	
+	.color-palette .palette.primary-green:hover {
+		background: #368836;
+	}
+	
+	.color-palette .palette.link-blue {
+		background: #0074e8;
+	}
+	
+	.color-palette .palette.link-blue:hover {
+		background: #005ab5;
+	}
+	
+	.color-palette .palette.presentation-yellow {
+		background: #ffbba5;
+	}
+	
+	.color-palette .palette.presentation-yellow:hover {
+		background: #ff9472;
+	}
+	
+	.color-palette .palette.purple-mountain {
+		background: #a14ebf;
+	}
+	
+	.color-palette .palette.purple-mountain:hover {
+		background: #853aa0;
+	}
+	
+	.color-palette .palette.help-orange {
+		background: #E67E22;
+	}
+	
+	.color-palette .palette.help-orange:hover {
+		background: #bf6516;
+	}
+	
+	.color-palette .palette.warm-light {
+		background: #FCF4E8;
+	}
+	
+	.color-palette .palette.warm-light:hover {
+		background: #f6debb;
+	}
+	
+	.color-palette .palette.storm-cloud {
+		background: #666666;
+	}
+	
+	.color-palette .palette.storm-cloud:hover {
+		background: #4d4d4d;
+	}
+	
+	.color-palette .palette.steel {
+		background: #333333;
+	}
+	
+	.color-palette .palette.steel:hover {
+		background: #1a1a1a;
+	}
+	
+	.color-palette .palette.paper {
+		background: #FFFFFF;
+	}
+	
+	.color-palette .palette.paper:hover {
+		background: #e6e6e6;
+	}
+	
+	.color-palette .palette.void {
+		background: #0E0E0E;
+	}
+	
+	.color-palette .palette.void:hover {
+		background: #000000;
+	}
+	
+	.color-palette .palette.dark-matter {
+		background: #232323;
+	}
+	
+	.color-palette .palette.dark-matter:hover {
+		background: #0a0a0a;
+	}
+	
+	.color-palette .palette.stainless {
+		background: #B2B2B2;
+	}
+	
+	.color-palette .palette.stainless:hover {
+		background: #999999;
+	}
+	
+	.color-palette .palette.ethereal {
+		background: #D8D8D8;
+	}
+	
+	.color-palette .palette.ethereal:hover {
+		background: #bfbfbf;
+	}
+	
+	.color-palette .palette.silver-diva {
+		background: #EBEBEB;
+	}
+	
+	.color-palette .palette.silver-diva:hover {
+		background: #d2d2d2;
+	}
+	
+	.color-palette .palette.morning-dew {
+		background: #c0f3a7;
+	}
+	
+	.color-palette .palette.morning-dew:hover {
+		background: #a0ed7a;
+	}
+	
+	.color-palette .palette.foggy {
+		background: #cee1f7;
+	}
+	
+	.color-palette .palette.foggy:hover {
+		background: #a2c6f0;
+	}
+	
+	.color-palette .palette.plastic-cheese {
+		background: #f9cb76;
+	}
+	
+	.color-palette .palette.plastic-cheese:hover {
+		background: #f7b845;
+	}
+	
+	.color-palette .palette.lavendery {
+		background: #cc99cc;
+	}
+	
+	.color-palette .palette.lavendery:hover {
+		background: #bb77bb;
+	}
+	
+	.color-palette .palette.just-peachy {
+		background: #ffcc99;
+	}
+	
+	.color-palette .palette.just-peachy:hover {
+		background: #ffb366;
+	}
+	
+	.color-palette .palette.ectoplasm {
+		background: #85dd85;
+	}
+	
+	.color-palette .palette.ectoplasm:hover {
+		background: #5dd25d;
+	}
+	
+	.color-palette .palette.robins-egg {
+		background: #99ccff;
+	}
+	
+	.color-palette .palette.robins-egg:hover {
+		background: #66b2ff;
+	}
+	
+	.color-palette .palette.cool-ranch {
+		background: #f8bd4f;
+	}
+	
+	.color-palette .palette.cool-ranch:hover {
+		background: #f6ab1e;
+	}
+	
+	.color-palette .palette.witch-cape {
+		background: #9966cc;
+	}
+	
+	.color-palette .palette.witch-cape:hover {
+		background: #7f40bf;
+	}
+	
+	.color-palette .palette.salmon {
+		background: #E67E22;
+	}
+	
+	.color-palette .palette.salmon:hover {
+		background: #bf6516;
+	}
+	
+	.color-palette .palette.mr-toad {
+		background: #478f47;
+	}
+	
+	.color-palette .palette.mr-toad:hover {
+		background: #366d36;
+	}
+	
+	.color-palette .palette.poseidon {
+		background: #0066cc;
+	}
+	
+	.color-palette .palette.poseidon:hover {
+		background: #004c99;
+	}
+	
+	.color-palette .palette.cheetah {
+		background: #eb9c0a;
+	}
+	
+	.color-palette .palette.cheetah:hover {
+		background: #ba7c08;
+	}
+	
+	.color-palette .palette.purple-people-eater {
+		background: #663399;
+	}
+	
+	.color-palette .palette.purple-people-eater:hover {
+		background: #4c2673;
+	}
+	
+	.color-palette .palette.five-alarm-chili {
+		background: #ff3300;
+	}
+	
+	.color-palette .palette.five-alarm-chili:hover {
+		background: #cc2900;
+	}
+	
+	.color-palette .palette.forest {
+		background: #104810;
+	}
+	
+	.color-palette .palette.forest:hover {
+		background: #071e07;
+	}
+	
+	.color-palette .palette.post-box {
+		background: #003366;
+	}
+	
+	.color-palette .palette.post-box:hover {
+		background: #001933;
+	}
+	
+	.color-palette .palette.squashy {
+		background: #d78f09;
+	}
+	
+	.color-palette .palette.squashy:hover {
+		background: #a66e07;
+	}
+	
+	.color-palette .palette.california-raisins {
+		background: #663366;
+	}
+	
+	.color-palette .palette.california-raisins:hover {
+		background: #442244;
+	}
+	
+	.color-palette .palette.paprika {
+		background: #cc3300;
+	}
+	
+	.color-palette .palette.paprika:hover {
+		background: #992600;
+	}
+	
+	.color-palette .palette.dark-blue {
+		background: #004d99;
+	}
+	
+	.color-palette .palette.dark-blue:hover {
+		background: #003366;
+	}
+	
+	.color-palette .palette.background-gray {
+		background: #FBFCFC;
+	}
+	
+	.color-palette .palette.background-gray:hover {
+		background: #dee6e6;
+	}
+	
+	.copied {
+		font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+		position: absolute;
+		background: #fff;
+		border-radius: 100px;
+		padding: 10px;
+		top: 50%;
+		left: 50%;
+		text-align: center;
+		margin-left: -40px;
+		margin-top: -20px;
+		color: #333;
+		width: 80px;
+		transform: scale(0);
+		opacity: 1;
+	}
+	
+	.copiedEffect {
+		animation: rippleDrop 0.5s linear;
+	}
+	
+	.ripple {
+		width: 0;
+		height: 0;
+		border-radius: 50%;
+		background: #ffffff;
+		transform: scale(0.8);
+		position: absolute;
+		opacity: 0;
+	}
+	
+	.rippleEffect {
+		animation: rippleDrop 0.5s linear;
+	}
+	
+	.copiedEffect {
+		animation: copiedDrop 1s ease;
+	}
+	
+	@keyframes rippleDrop {
+		100% {
+			transform: scale(1);
+			opacity: 0;
+		}
+	}
+	
+	@keyframes copiedDrop {
+		50% {
+			transform: scale(0.8);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(1.2);
+			opacity: 0;
+		}
+	}
+	/****** Footer ******/
+	
+	.footer {
+		background-color: white;
+	}
+	/*** Sticky Footer ***/
+	
+	html {
+		position: relative;
+		min-height: 100%;
+	}
+	
+	body {
+		margin-bottom: 60px;
+		background-color: #d6d6d6;
+	}
+	
+	.footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
+	}
+	</style>
 </head>
 
-<body translate="no" >
-  <header class="header">
-  <div class="container">
-    <h1 class="page-header">Wiki Colors</h1>
-  </div>
-</header>
-
-<div class="primary">
-  <div class="container">
-    <p>Click a color box in the first section to copy just the HEX code. The 2nd section allows you to copy the panel markup, which can inserted when editing the wiki using CTRL+SHIFT+D.</p><br>
-    <div style="width: 50%; height: 100px; float: left;">
-      <h2>Primary</h2>
-      <div class="color-palette">
-        <div class="palette primary-green" data-clipboard-text='#45AD44'></div>
-        <div class="palette link-blue" data-clipboard-text='#0074e8'></div>
-        <div class="palette help-orange" data-clipboard-text='#E67E22'></div>
-        <br>
-
-        <div class="palette dark-matter" data-clipboard-text='#232323'></div>
-        <div class="palette purple-mountain" data-clipboard-text='#a14ebf'></div>
-        <div class="palette paprika" data-clipboard-text='#cc3300'></div>
-
-        <br>
-        <div class="palette dark-blue" data-clipboard-text='#004d99'></div>
-        <div class="palette background-gray" data-clipboard-text='#FBFCFC'></div>
-        <div class="palette presentation-yellow" data-clipboard-text='#ffbba5'></div>
-      </div>
-    </div>
-    <div style="margin-left: 50%; height: 100px;">
-      <h2>Panel Markup</h2>
-      <div class="color-palette">
-        <div class="palette primary-green" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#45AD44|titleBGColor=#45AD44|titleColor=white|bgColor=#FBFCFC}
+<body translate="no">
+	<header class="header">
+		<div class="container">
+			<h1 class="page-header">Wiki Colors</h1> </div>
+	</header>
+	<div class="primary">
+		<div class="container">
+			<p>Click a color box in the first section to copy just the HEX code. The 2nd section allows you to copy the panel markup, which can inserted when editing the wiki using CTRL+SHIFT+D.</p>
+			
+			<div style="width: 50%; height: 100px; float: left;">
+				<h2>Primary</h2>
+				<div class="color-palette">
+					<div class="palette primary-green" data-clipboard-text='#45AD44'></div>
+					<div class="palette link-blue" data-clipboard-text='#0074e8'></div>
+					<div class="palette help-orange" data-clipboard-text='#E67E22'></div>
+					<br>
+					<div class="palette dark-matter" data-clipboard-text='#232323'></div>
+					<div class="palette purple-mountain" data-clipboard-text='#a14ebf'></div>
+					<div class="palette paprika" data-clipboard-text='#cc3300'></div>
+					<br>
+					<div class="palette dark-blue" data-clipboard-text='#004d99'></div>
+					<div class="palette background-gray" data-clipboard-text='#FBFCFC'></div>
+					<div class="palette presentation-yellow" data-clipboard-text='#ffbba5'></div>
+				</div>
+			</div>
+			<div style="margin-left: 50%; height: 100px;">
+				<h2>Panel Markup</h2>
+				<div class="color-palette">
+					<div class="palette primary-green" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#45AD44|titleBGColor=#45AD44|titleColor=white|bgColor=#FBFCFC}
                                                                     {panel}'></div>
-        <div class="palette link-blue" data-clipboard-text='{panel:title=Slack Resources|borderStyle=solid|borderColor=#0074e8|titleBGColor=#0074e8|titleColor=white|bgColor=#FBFCFC}
+					<div class="palette link-blue" data-clipboard-text='{panel:title=Slack Resources|borderStyle=solid|borderColor=#0074e8|titleBGColor=#0074e8|titleColor=white|bgColor=#FBFCFC}
 {panel}'></div>
-        <div class="palette help-orange" data-clipboard-text='{panel:title=Help Articles|borderStyle=solid|borderColor=#E67E22|titleBGColor=#E67E22|titleColor=white|bgColor=#FBFCFC}
+					<div class="palette help-orange" data-clipboard-text='{panel:title=Help Articles|borderStyle=solid|borderColor=#E67E22|titleBGColor=#E67E22|titleColor=white|bgColor=#FBFCFC}
 {panel}'></div>
-
-        <br>
-        <div class="palette dark-matter" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#232323|titleBGColor=#232323|titleColor=white|bgColor=#FBFCFC}
+					<br>
+					<div class="palette dark-matter" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#232323|titleBGColor=#232323|titleColor=white|bgColor=#FBFCFC}
 {panel}'></div>
-        <div class="palette purple-mountain" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#a14ebf|titleBGColor=#a14ebf|titleColor=white|bgColor=#FBFCFC}
+					<div class="palette purple-mountain" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#a14ebf|titleBGColor=#a14ebf|titleColor=white|bgColor=#FBFCFC}
 {panel}'></div>
-        <div class="palette paprika" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#cc3300|titleBGColor=#cc3300|titleColor=white|bgColor=#FBFCFC}
+					<div class="palette paprika" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#cc3300|titleBGColor=#cc3300|titleColor=white|bgColor=#FBFCFC}
 {panel}'></div>
-        <br>
-
-        <div class="palette dark-blue" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#004d99|titleBGColor=#004d99|titleColor=white|bgColor=#FBFCFC}
+					<br>
+					<div class="palette dark-blue" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#004d99|titleBGColor=#004d99|titleColor=white|bgColor=#FBFCFC}
 {panel}'></div>
-        <div class="palette background-gray" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#0074e8|titleBGColor=#0074e8|titleColor=white|bgColor=#FBFCFC}
+					<div class="palette background-gray" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#0074e8|titleBGColor=#0074e8|titleColor=white|bgColor=#FBFCFC}
 {panel}'></div>
-        <div class="palette presentation-yellow" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#F1C40F|titleBGColor=#F1C40F|titleColor=white|bgColor=#ffbba5}
+					<div class="palette presentation-yellow" data-clipboard-text='{panel:title=XYZ|borderStyle=solid|borderColor=#F1C40F|titleBGColor=#F1C40F|titleColor=white|bgColor=#ffbba5}
 {panel}'></div>
-
-      </div>
-
-    </div>
-  </div>
-  
-  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js'></script>
-<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-      <script id="rendered-js" >
-new Clipboard('.palette');
-
-$(".palette").click(function (e) {
-  
-  console.log('clicked');
-  
-  // Remove any old one
-  $(".ripple").remove();
-  $(".copied").remove();
-
-  // Setup
-  var width = $(this).width();
-  var height =  $(this).height();
-  
-  console.log(width);
-  console.log(height);
-  
-  // Add the element
-  $(this).prepend("<span class='copied'>Copied!</span>");
-  $(this).prepend("<span class='ripple'></span>");
-  
-  // Add the ripples CSS and start the animation
-  $(".ripple").css({
-    width: width,
-    height: height,
-    top: width/2,
-    left: height/2,
-  }).addClass("rippleEffect");
-  
-  $(".copied").css({
-  }).addClass("copiedEffect");
-});
-    </script>
-
-  
-
+				</div>
+			</div>
+		</div>
+		</div>
+		<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js'></script>
+		<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+		<script id="rendered-js">
+		new Clipboard('.palette');
+		$(".palette").click(function(e) {
+			console.log('clicked');
+			// Remove any old one
+			$(".ripple").remove();
+			$(".copied").remove();
+			// Setup
+			var width = $(this).width();
+			var height = $(this).height();
+			console.log(width);
+			console.log(height);
+			// Add the element
+			$(this).prepend("<span class='copied'>Copied!</span>");
+			$(this).prepend("<span class='ripple'></span>");
+			// Add the ripples CSS and start the animation
+			$(".ripple").css({
+				width: width,
+				height: height,
+				top: width / 2,
+				left: height / 2,
+			}).addClass("rippleEffect");
+			$(".copied").css({}).addClass("copiedEffect");
+		});
+		</script>
 </body>
 
 </html>
- 
